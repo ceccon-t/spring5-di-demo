@@ -25,5 +25,6 @@ public class DiDemoApplication {
 		
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class); 
 		System.out.println("User name from datasource.properties: " + fakeDataSource.getUser());
+		System.out.println("Pass from datasource.properties: " + fakeDataSource.getPass());
 	}
 }
