@@ -9,6 +9,7 @@ import guru.springframework.controllers.GetterInjectedController;
 import guru.springframework.controllers.MyController;
 import guru.springframework.controllers.PropertyInjectedController;
 import guru.springframework.examplebeans.FakeDataSource;
+import guru.springframework.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -26,5 +27,8 @@ public class DiDemoApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class); 
 		System.out.println("User name from datasource.properties: " + fakeDataSource.getUser());
 		System.out.println("Pass from datasource.properties: " + fakeDataSource.getPass());
+		
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		System.out.println("Url from jms.properties: " + fakeJmsBroker.getUrl());
 	}
 }
