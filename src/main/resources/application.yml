@@ -1,0 +1,5 @@
+guru:
+   jms:
+      username: JMS Username yml
+      pass: somepassyml
+      url: someurlyml
