@@ -3,3 +3,10 @@ guru:
       username: JMS Username yml
       pass: somepassyml
       url: someurlyml
+      
+---
+spring:
+   profiles: de
+guru:
+   jms:
+      username: JMS Username German

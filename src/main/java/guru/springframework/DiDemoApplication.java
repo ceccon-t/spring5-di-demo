@@ -25,10 +25,11 @@ public class DiDemoApplication {
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 		
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class); 
-		System.out.println("User name from datasource.properties: " + fakeDataSource.getUser());
-		System.out.println("Pass from datasource.properties: " + fakeDataSource.getPass());
+		System.out.println("User name from properties: " + fakeDataSource.getUser());
+		System.out.println("Pass from properties: " + fakeDataSource.getPass());
+		System.out.println("Url from data source: " + fakeDataSource.getUrl());
 		
 		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
-		System.out.println("Url from jms.properties: " + fakeJmsBroker.getUrl());
+		System.out.println("User from jms properties: " + fakeJmsBroker.getUsername());
 	}
 }
